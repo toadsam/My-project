@@ -8,13 +8,13 @@ public class TopDownMovement : MonoBehaviour
 
     private Vector2 _movementDirection = Vector2.zero;
     private Rigidbody2D _rigidbody;
-    Animation ani;
+    public Animator ani;
 
     private void Awake()
     {
         _controller = GetComponent<TopDownCharacterController>();
         _rigidbody = GetComponent<Rigidbody2D>();
-        ani = GetComponent<Animation>();
+       
     }
 
     private void Start()
@@ -34,8 +34,19 @@ public class TopDownMovement : MonoBehaviour
 
     private void ApplyMovment(Vector2 direction)
     {
+       
         direction = direction * 5;
 
         _rigidbody.velocity = direction;
+        Debug.Log(_rigidbody.velocity);
+        //if (_rigidbody.velocity.x > 1.0)
+        //{
+        //    ani.SetBool("isRight", true);
+        //}
+        //else
+        //{
+        //    ani.SetBool("isRight", false);
+        //    Debug.Log(_rigidbody.velocity.x);
+        //}
     }
 }
