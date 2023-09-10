@@ -38,7 +38,7 @@ public class TopDownMovement : MonoBehaviour
         direction = direction * 5;
 
         _rigidbody.velocity = direction;
-        Debug.Log(_rigidbody.velocity);
+       // Debug.Log(_rigidbody.velocity);
         //if (_rigidbody.velocity.x > 1.0)
         //{
         //    ani.SetBool("isRight", true);
