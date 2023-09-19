@@ -9,10 +9,11 @@ public class TopDownMovement : MonoBehaviour
     private Vector2 _movementDirection = Vector2.zero;
     private Rigidbody2D _rigidbody;
     public Animator ani;
-
+    private CharacterStatsHandler _stats;
     private void Awake()
     {
         _controller = GetComponent<TopDownCharacterController>();
+        _stats = GetComponent<CharacterStatsHandler>(); // 캐릭터 스탯조절 추가
         _rigidbody = GetComponent<Rigidbody2D>();
        
     }
@@ -34,8 +35,8 @@ public class TopDownMovement : MonoBehaviour
 
     private void ApplyMovment(Vector2 direction)
     {
-       
-        direction = direction * 5;
+
+        direction = direction * _stats.CurrentStates.speed;
 
         _rigidbody.velocity = direction;
        // Debug.Log(_rigidbody.velocity);

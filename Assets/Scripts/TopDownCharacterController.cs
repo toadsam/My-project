@@ -8,10 +8,17 @@ public class TopDownCharacterController : MonoBehaviour
 {
     public event Action<Vector2> OnMoveEvent;
     public event Action<Vector2> OnLookEvent;
-    private void Start()
+    public event Action OnAttackEvent;
+
+    private float _timeSinceLastAttack = float.MaxValue;
+    protected bool IsAttacking { get; set; }
+
+    protected CharacterStatsHandler Stats { get; private set; }
+    protected virtual void Awake()
     {
-       // anim = main.GetComponent<Animator>();
+        Stats = GetComponent<CharacterStatsHandler>();
     }
+
 
     public void CallMoveEvent(Vector2 direction)
     {
@@ -23,5 +30,26 @@ public class TopDownCharacterController : MonoBehaviour
     {
         OnLookEvent?.Invoke(direction);
     }
+    private void HandleAttackDelay()
+    {
+        if (Stats.CurrentStates.attackSO == null)
+            return;
 
+        if (_timeSinceLastAttack <= 0.2f)    // TODO
+            if (_timeSinceLastAttack <= Stats.CurrentStates.attackSO.delay)
+            {
+                _timeSinceLastAttack += Time.deltaTime;
+            }
+
+        if (IsAttacking && _timeSinceLastAttack > 0.2f)
+            if (IsAttacking && _timeSinceLastAttack > Stats.CurrentStates.attackSO.delay)
+            {
+                _timeSinceLastAttack = 0;
+                CallAttackEvent();
+            }
+    }
+    public void CallAttackEvent()
+    {
+        OnAttackEvent?.Invoke();
+    }
 }
