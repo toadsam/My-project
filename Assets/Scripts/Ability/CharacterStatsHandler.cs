@@ -6,7 +6,7 @@ using UnityEngine;
 public class CharacterStatsHandler : MonoBehaviour   //캐릭터 핸들러
 {
     [SerializeField] private CharacterStats baseStats;   //기본 스탯
-    public CharacterStats CurrentStates { get; private set; }  //현재 스탯
+    public  CharacterStats CurrentStates { get; private set; }  //현재 스탯
     public List<CharacterStats> statsModifiers = new List<CharacterStats>();  //캐릭터 스탯을 담는 리스트 생성
 
     private void Awake()
