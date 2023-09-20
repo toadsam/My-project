@@ -6,7 +6,7 @@ using UnityEngine;
 public class CharacterStatsHandler : MonoBehaviour   //캐릭터 핸들러
 {
     [SerializeField] private CharacterStats baseStats;   //기본 스탯
-    public  CharacterStats CurrentStates { get; private set; }  //현재 스탯
+    public CharacterStats CurrentStates { get;  set; }  //현재 스탯
     public List<CharacterStats> statsModifiers = new List<CharacterStats>();  //캐릭터 스탯을 담는 리스트 생성
 
     private void Awake()
@@ -27,6 +27,7 @@ public class CharacterStatsHandler : MonoBehaviour   //캐릭터 핸들러
         CurrentStates.statsChangeType = baseStats.statsChangeType;   //전부타 현재의 값으로 넣어주기
         CurrentStates.maxHealth = baseStats.maxHealth;
         CurrentStates.speed = baseStats.speed;
+        //Debug.Log(CurrentStates.speed);
 
     }
 }

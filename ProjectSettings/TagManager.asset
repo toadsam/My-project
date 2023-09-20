@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Npc
   - Potal
+  - FieldItem
   layers:
   - Default
   - TransparentFX

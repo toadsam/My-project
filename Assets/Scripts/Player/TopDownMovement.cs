@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting.Antlr3.Runtime.Misc;
 using UnityEngine;
 
 public class TopDownMovement : MonoBehaviour
@@ -10,6 +11,7 @@ public class TopDownMovement : MonoBehaviour
     private Rigidbody2D _rigidbody;
     public Animator ani;
     private CharacterStatsHandler _stats;
+    
     private void Awake()
     {
         _controller = GetComponent<TopDownCharacterController>();

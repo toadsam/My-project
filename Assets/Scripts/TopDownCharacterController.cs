@@ -38,7 +38,7 @@ public class TopDownCharacterController : MonoBehaviour
     {
         if (Stats.CurrentStates.attackSO == null)
         {
-            Debug.Log("À×¹ø");
+            Debug.Log("³ªºñ¾ûÀÖ¾î¹ø");
             return;
         }
 
