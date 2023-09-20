@@ -36,7 +36,8 @@ public class Slot : MonoBehaviour, IPointerUpHandler //슬록 장비 관리 아이템  //
     {
         Debug.Log("이게 문제니?");
         AgainItemUi.SetActive(true);
-       // AgainItemYes();
+        AgainItemUi.transform.position = this.transform.TransformPoint(new Vector3(166,-140, 0));
+        // AgainItemYes();
     }
    public void AgainItemYes()
     {
@@ -47,6 +48,7 @@ public class Slot : MonoBehaviour, IPointerUpHandler //슬록 장비 관리 아이템  //
             if(item.itemType == 0)
             {
                 AgainItemUi.transform.position = new Vector3(-4,1,0);
+                AgainItemUi.transform.position = transform.TransformPoint(new Vector3(0,0,0));
                 Debug.Log("여기 억인");
                 Inven.Instance.playerWeapon.sprite = item.itemImage;
                 //이제 여기다가 플레이어의 이미지를 받아서 교체를 해준다
