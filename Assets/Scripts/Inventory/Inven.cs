@@ -21,7 +21,7 @@ public class Inven : MonoBehaviour
     public OnSlotCountChange onSlotCountChange;  // 델리게이트  만듬
     public SpriteRenderer playerWeapon;  //플레이어의 무기를 바꾸기 위함
 
-    public delegate void OnChangeItem();
+    public delegate  void OnChangeItem();
     public OnChangeItem onChangeItem;
 
     public List<Item>items = new List<Item>(); // 인벤토리에 담을 아이템 만들기

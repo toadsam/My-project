@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class UiPlayer : MonoBehaviour
 {
-    public static UiManager instance;
+   // public static UiManager instance;
     // Start is called before the first frame update
    
         
