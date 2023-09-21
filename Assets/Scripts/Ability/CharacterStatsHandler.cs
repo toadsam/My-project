@@ -27,6 +27,8 @@ public class CharacterStatsHandler : MonoBehaviour   //캐릭터 핸들러
         CurrentStates.statsChangeType = baseStats.statsChangeType;   //전부타 현재의 값으로 넣어주기
         CurrentStates.maxHealth = baseStats.maxHealth;
         CurrentStates.speed = baseStats.speed;
+        CurrentStates.money = baseStats.money;
+        CurrentStates.level = baseStats.level;
         //Debug.Log(CurrentStates.speed);
 
     }

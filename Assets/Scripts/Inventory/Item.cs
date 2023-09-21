@@ -4,7 +4,8 @@ using UnityEngine;
 
 public enum ItemType
 {
-    Equipment,
+    AttakEquipment,
+    HatEquipment,
     Consumables,
     Etc
 }

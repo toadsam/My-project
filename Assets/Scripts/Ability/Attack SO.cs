@@ -11,6 +11,8 @@ public class AttackSO : ScriptableObject
     public float delay;
     public float power;
     public float speed;
+    public float defence;
+    public float criticalPower;
     public LayerMask target;
 
     [Header("Knock Back Info")]  //해더 이름정함
