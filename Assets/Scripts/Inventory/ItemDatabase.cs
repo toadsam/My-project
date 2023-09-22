@@ -16,10 +16,10 @@ public class ItemDatabase : MonoBehaviour
 
     private void Start()
     {
-        for(int i = 0; i < 5; i++) //필드에 뿌리는 메서드
+        for(int i = 0; i < 8; i++) //필드에 뿌리는 메서드
         {
            GameObject go = Instantiate(fieldItemPrefab, pos[i],Quaternion.identity);
-            go.GetComponent<FieldItems>().SetItem(itemDB[Random.Range(0, 3)]);
+            go.GetComponent<FieldItems>().SetItem(itemDB[Random.Range(0, itemDB.Count)]);
         }
     }
 

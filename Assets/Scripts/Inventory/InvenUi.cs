@@ -9,8 +9,10 @@ public class InvenUi : MonoBehaviour
     Inven inven;  //인벤 클래스 생성 
     public GameObject inventoryUi;  // 인벤ui담을 오브젝트 만들기
     bool activeInventory =false;  //처음에는 fasle로 설정하기
+   
 
-    public Slot[] slots; // 슬록을 담을 배열 만들기
+
+    public static Slot[] slots; // 슬록을 담을 배열 만들기
     public Transform slotHolder;  // 슬룻들의 위치를 가져오기 위해서 선언
     // Start is called before the first frame update
     void Start()
@@ -63,4 +65,5 @@ public class InvenUi : MonoBehaviour
             slots[i].UpdateSlotUI();  //업데이트 하기
         }
     }
+   
 }

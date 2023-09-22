@@ -4,7 +4,8 @@ using UnityEngine;
 
 public enum ItemType
 {
-    Equipment,
+    AttakEquipment,
+    HatEquipment,
     Consumables,
     Etc
 }
@@ -15,6 +16,8 @@ public class Item
     public ItemType itemType;
     public string itemNmae;
     public Sprite itemImage;
+    public int addAttack;
+    public int addDefence;
     public List<ItemEffect> efts;
 
     public bool Use()
