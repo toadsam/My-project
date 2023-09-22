@@ -38,6 +38,7 @@ public class Inven : MonoBehaviour
         {
             slotCnt = value;  //value에 대해서 알아보기
             onSlotCountChange.Invoke(slotCnt);
+            
         }
     }
        
