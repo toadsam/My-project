@@ -18,10 +18,11 @@ public class Inven : MonoBehaviour
         Instance = this;
     }
 
-    public delegate void OnSlotCountChange(int val);  //델리게이트 형식 만들기
-    public OnSlotCountChange onSlotCountChange;  // 델리게이트  만듬
+    public delegate void OnSlotCountChange(int val);   //델리게이트 형식 만들기
+    public OnSlotCountChange onSlotCountChange;       // 델리게이트  만듬
+
     public SpriteRenderer playerWeapon;  //플레이어의 무기를 바꾸기 위함
-    public SpriteRenderer playerHat;  //플레이어의 무기를 바꾸기 위함
+    public SpriteRenderer playerHat;  //플레이어의 모자를 바꾸기 위함
 
     public delegate  void OnChangeItem();
     public OnChangeItem onChangeItem;

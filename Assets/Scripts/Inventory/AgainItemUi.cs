@@ -30,15 +30,10 @@ public class AgainItemUi : MonoBehaviour
     public YesAgainItem yesAgainItem;  // µ®∏Æ∞‘¿Ã∆Æ  ∏∏µÎ
 
 
-    private void Update()
-    {
-        //if (isAgainItem) { AgainItemUiPenal.SetActive(true); }
-        //else { AgainItemUiPenal.SetActive(false); }
-    }
 
     public void AgainItemYesYes()
     {
-       // yesAgainItem();
+       
         AgainItemUiPenal.SetActive(false);
         isYesBtn = true; 
 
