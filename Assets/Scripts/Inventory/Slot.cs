@@ -63,7 +63,7 @@ public class Slot : MonoBehaviour, IPointerUpHandler //슬록 장비 관리 아이템  //
                 Inven.Instance.AddEquipmentItem(slotnum);
             }
 
-            else Inven.Instance.RemoveItem(slotnum);  // 
+            else Inven.Instance.RemoveItem(slotnum);   
             
         }
     }
